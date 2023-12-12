@@ -16,17 +16,17 @@ public class Book {
     @ManyToMany
     @JoinTable(name = "author_book", joinColumns = @JoinColumn(name = "book_id"),
             inverseJoinColumns = @JoinColumn(name = "author_id"))
-    private Set<Author> authors;
+    private Set<Author> authors = new HashSet<>();
 
     public Book() {
     }
 
-    public Book(String title, String isbn, String publisher) {
+    public Book(String title, String isbn) {
         this.title = title;
         this.isbn = isbn;
     }
 
-    public Book(String title, String isbn, String publisher, Set<Author> authors) {
+    public Book(String title, String isbn, Set<Author> authors) {
         this.title = title;
         this.isbn = isbn;
         this.authors = authors;
@@ -76,7 +76,7 @@ public class Book {
 
     @Override
     public int hashCode() {
-        return id.hashCode();
+        return id != null ? id.hashCode() : 0;
     }
 
     @Override
