@@ -31,8 +31,12 @@ public class SpringDataInit implements CommandLineRunner {
         publisher.setName("Mohamed");
         publisher.setAddressLine1("New Cairo, Street x, Building xx");
 
+        publisherRepository.save(publisher);
+
         author.getBooks().add(book);
         book.getAuthors().add(author);
+        book.setPublisher(publisher);
+        publisher.getBooks().add(book);
 
         authorRepository.save(author);
         bookRepository.save(book);
@@ -44,12 +48,16 @@ public class SpringDataInit implements CommandLineRunner {
         author2.getBooks().add(book2);
         book2.getAuthors().add(author2);
 
+        book2.setPublisher(publisher);
+
         authorRepository.save(author2);
         bookRepository.save(book2);
+        publisherRepository.save(publisher);
 
         System.out.println("Initializing objects...");
         System.out.println("Number of books : "+ bookRepository.count());
         System.out.println("Number of authors : "+ authorRepository.count());
         System.out.println("Number of publishers : "+ publisherRepository.count());
+        System.out.println("Publisher number of books : "+ publisher.getBooks().size());
     }
 }
