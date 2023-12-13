@@ -1,0 +1,13 @@
+package com.omarE505.PetClinicDemo;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class PetClinicDemoApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}
