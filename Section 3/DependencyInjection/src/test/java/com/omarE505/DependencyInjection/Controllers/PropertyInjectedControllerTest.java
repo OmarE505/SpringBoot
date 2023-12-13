@@ -1,10 +1,8 @@
 package com.omarE505.DependencyInjection.Controllers;
 
-import com.omarE505.DependencyInjection.Services.GreetingsServiceImpl;
+import com.omarE505.DependencyInjection.Services.PropertyGreetingsService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class PropertyInjectedControllerTest {
     PropertyInjectedController controller;
@@ -13,7 +11,7 @@ class PropertyInjectedControllerTest {
     @BeforeEach
     void setUp() {
         controller = new PropertyInjectedController();
-        controller.greetingsService = new GreetingsServiceImpl();
+        controller.greetingsService = new PropertyGreetingsService();
     }
 
     @Test

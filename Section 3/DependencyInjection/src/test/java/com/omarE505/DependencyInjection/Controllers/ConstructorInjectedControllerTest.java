@@ -1,10 +1,8 @@
 package com.omarE505.DependencyInjection.Controllers;
 
-import com.omarE505.DependencyInjection.Services.GreetingsServiceImpl;
+import com.omarE505.DependencyInjection.Services.ConstructorGreetingsService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class ConstructorInjectedControllerTest {
 
@@ -12,7 +10,7 @@ class ConstructorInjectedControllerTest {
 
     @BeforeEach
     void setUp() {
-        controller = new ConstructorInjectedController(new GreetingsServiceImpl());
+        controller = new ConstructorInjectedController(new ConstructorGreetingsService());
     }
 
     @Test
