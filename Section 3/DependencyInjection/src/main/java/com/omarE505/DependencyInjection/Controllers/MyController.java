@@ -1,13 +1,18 @@
 package com.omarE505.DependencyInjection.Controllers;
 
+import com.omarE505.DependencyInjection.Services.GreetingsService;
 import org.springframework.stereotype.Controller;
 
 @Controller
 public class MyController {
 
-    public String sayHello(){
-        System.out.println("Hello world");
+    private final GreetingsService greetingsService;
 
-        return "Hello";
+    public MyController(GreetingsService greetingsService) {
+        this.greetingsService = greetingsService;
+    }
+
+    public String sayHello(){
+        return greetingsService.sayGreetings();
     }
 }
