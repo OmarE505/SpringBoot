@@ -1,9 +1,6 @@
 package com.omarE505.DependencyInjection;
 
-import com.omarE505.DependencyInjection.Controllers.ConstructorInjectedController;
-import com.omarE505.DependencyInjection.Controllers.MyController;
-import com.omarE505.DependencyInjection.Controllers.PropertyInjectedController;
-import com.omarE505.DependencyInjection.Controllers.SetterInjectedController;
+import com.omarE505.DependencyInjection.Controllers.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -13,8 +10,11 @@ public class DependencyInjectionApplication {
 
 	public static void main(String[] args) {
 		ApplicationContext ctx = SpringApplication.run(DependencyInjectionApplication.class, args);
-		MyController myController = (MyController) ctx.getBean("myController");
 
+		I18NController i18NController = (I18NController) ctx.getBean("i18NController");
+		System.out.println(i18NController.sayHello());
+
+		MyController myController = (MyController) ctx.getBean("myController");
 		System.out.println("-------- Primary");
 		System.out.println(myController.sayHello());
 
