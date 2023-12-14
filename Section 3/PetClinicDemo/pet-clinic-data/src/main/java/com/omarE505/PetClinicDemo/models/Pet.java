@@ -1,4 +1,4 @@
-package com.omarE505.PetClinicDemo.model;
+package com.omarE505.PetClinicDemo.models;
 
 import java.time.LocalDate;
 
