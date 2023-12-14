@@ -1,8 +1,5 @@
 package com.omarE505.PetClinicDemo.model;
 
-import jakarta.persistence.Entity;
-
-@Entity
 public class Person {
     private String firstName;
     private String lastName;
