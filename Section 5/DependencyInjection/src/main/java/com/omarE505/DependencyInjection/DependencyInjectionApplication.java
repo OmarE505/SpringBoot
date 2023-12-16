@@ -4,12 +4,17 @@ import com.omarE505.DependencyInjection.controllers.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 public class DependencyInjectionApplication {
 
 	public static void main(String[] args) {
 		ApplicationContext ctx = SpringApplication.run(DependencyInjectionApplication.class, args);
+
+		PetController petController = ctx.getBean("petController", PetController.class);
+		System.out.println("--- The Best Pet Is ---");
+		System.out.println(petController.whichPetIsTheBest());
 
 		I18NController i18NController = (I18NController) ctx.getBean("i18NController");
 		System.out.println(i18NController.sayHello());
