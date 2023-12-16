@@ -11,7 +11,6 @@ import org.springframework.context.annotation.*;
 
 @ImportResource("classpath:omar-config.xml")
 @Configuration
-@PropertySource("classpath:datasource.properties")
 public class GreetingServiceConfig {
 
     @Bean
