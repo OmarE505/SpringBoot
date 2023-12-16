@@ -5,11 +5,9 @@ import com.omarE505.DependencyInjection.repositories.EnglishGreetingRepositoryIm
 import com.omarE505.DependencyInjection.services.*;
 import com.springframework.pets.PetService;
 import com.springframework.pets.PetServiceFactory;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
-import org.springframework.context.annotation.Profile;
+import org.springframework.context.annotation.*;
 
+@ImportResource("classpath:omar-config.xml")
 @Configuration
 public class GreetingServiceConfig {
 
@@ -33,11 +31,6 @@ public class GreetingServiceConfig {
     @Bean
     EnglishGreetingRepository englishGreetingRepository(){
         return new EnglishGreetingRepositoryImpl();
-    }
-
-    @Bean
-    ConstructorGreetingsService constructorGreetingsService(){
-        return new ConstructorGreetingsService();
     }
 
     @Bean
