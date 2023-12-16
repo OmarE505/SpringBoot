@@ -4,7 +4,6 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/Section 2 jpa entities" />
         <option name="gradleJvm" value="graalvm-jdk-17" />
         <option name="modules">
