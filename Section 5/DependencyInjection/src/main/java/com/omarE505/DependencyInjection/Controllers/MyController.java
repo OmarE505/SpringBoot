@@ -1,6 +1,6 @@
-package com.omarE505.DependencyInjection.Controllers;
+package com.omarE505.DependencyInjection.controllers;
 
-import com.omarE505.DependencyInjection.Services.GreetingsService;
+import com.omarE505.DependencyInjection.services.GreetingsService;
 import org.springframework.stereotype.Controller;
 
 @Controller

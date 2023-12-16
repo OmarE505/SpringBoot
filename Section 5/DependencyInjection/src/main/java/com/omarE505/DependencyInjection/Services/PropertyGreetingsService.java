@@ -1,8 +1,5 @@
-package com.omarE505.DependencyInjection.Services;
+package com.omarE505.DependencyInjection.services;
 
-import org.springframework.stereotype.Service;
-
-@Service
 public class PropertyGreetingsService implements GreetingsService{
     @Override
     public String sayGreetings() {

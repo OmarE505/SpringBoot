@@ -1,6 +1,6 @@
-package com.omarE505.DependencyInjection.Controllers;
+package com.omarE505.DependencyInjection.controllers;
 
-import com.omarE505.DependencyInjection.Services.SetterGreetingsService;
+import com.omarE505.DependencyInjection.services.SetterGreetingsService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

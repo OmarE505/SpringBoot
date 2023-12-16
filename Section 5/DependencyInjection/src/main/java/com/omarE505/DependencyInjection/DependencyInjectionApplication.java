@@ -1,6 +1,6 @@
 package com.omarE505.DependencyInjection;
 
-import com.omarE505.DependencyInjection.Controllers.*;
+import com.omarE505.DependencyInjection.controllers.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;

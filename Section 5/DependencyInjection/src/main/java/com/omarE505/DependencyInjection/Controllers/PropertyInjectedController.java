@@ -1,6 +1,6 @@
-package com.omarE505.DependencyInjection.Controllers;
+package com.omarE505.DependencyInjection.controllers;
 
-import com.omarE505.DependencyInjection.Services.GreetingsService;
+import com.omarE505.DependencyInjection.services.GreetingsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
