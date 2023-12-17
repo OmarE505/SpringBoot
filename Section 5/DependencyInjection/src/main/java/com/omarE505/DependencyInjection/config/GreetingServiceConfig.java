@@ -17,9 +17,9 @@ public class GreetingServiceConfig {
     @Bean
     FakeDataSource fakeDataSource(OmarConstructorConfig omarConstructorConfig) {
         FakeDataSource fakeDataSource = new FakeDataSource();
-        fakeDataSource.setJdbcurl(omarConstructorConfig.getJdbcurl());
-        fakeDataSource.setUsername(omarConstructorConfig.getUsername());
-        fakeDataSource.setPassword(omarConstructorConfig.getPassword());
+        fakeDataSource.setJdbcurl(omarConstructorConfig.getUsername());
+        fakeDataSource.setUsername(omarConstructorConfig.getPassword());
+        fakeDataSource.setPassword(omarConstructorConfig.getJdbcurl());
         return fakeDataSource;
     }
 
