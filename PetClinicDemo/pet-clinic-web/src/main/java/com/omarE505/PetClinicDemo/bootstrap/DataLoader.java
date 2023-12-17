@@ -1,8 +1,10 @@
 package com.omarE505.PetClinicDemo.bootstrap;
 
 import com.omarE505.PetClinicDemo.models.Owner;
+import com.omarE505.PetClinicDemo.models.PetType;
 import com.omarE505.PetClinicDemo.models.Vet;
 import com.omarE505.PetClinicDemo.services.OwnerService;
+import com.omarE505.PetClinicDemo.services.PetTypeService;
 import com.omarE505.PetClinicDemo.services.VetService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -12,14 +14,25 @@ public class DataLoader implements CommandLineRunner {
 
     private final OwnerService ownerService;
     private final VetService vetService;
+    private final PetTypeService petTypeService;
 
-    public DataLoader(OwnerService ownerService, VetService vetService) {
+    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
+        this.petTypeService = petTypeService;
     }
 
     @Override
     public void run(String... args) throws Exception {
+
+        PetType dog = new PetType();
+        dog.setName("Dog");
+        PetType savedDogType = petTypeService.save(dog);
+
+        PetType cat = new PetType();
+        cat.setName("Cat");
+        PetType savedCatType = petTypeService.save(cat);
+
         Owner owner1 = new Owner();
         owner1.setFirstName("Omar");
         owner1.setLastName("Emad");
@@ -47,5 +60,6 @@ public class DataLoader implements CommandLineRunner {
         vetService.save(vet2);
 
         System.out.println("Loaded Vets ...!");
+
     }
 }
