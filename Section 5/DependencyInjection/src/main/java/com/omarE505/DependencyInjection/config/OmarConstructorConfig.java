@@ -1,9 +1,7 @@
 package com.omarE505.DependencyInjection.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.context.properties.bind.ConstructorBinding;
 
-@ConstructorBinding
 @ConfigurationProperties("com")
 public class OmarConstructorConfig {
     private final String username;
