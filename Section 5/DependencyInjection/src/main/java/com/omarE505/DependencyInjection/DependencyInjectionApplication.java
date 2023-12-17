@@ -1,6 +1,7 @@
 package com.omarE505.DependencyInjection;
 
 import com.omarE505.DependencyInjection.config.OmarConfiguration;
+import com.omarE505.DependencyInjection.config.OmarConstructorConfig;
 import com.omarE505.DependencyInjection.controllers.*;
 import com.omarE505.DependencyInjection.datasource.FakeDataSource;
 import com.omarE505.DependencyInjection.services.PrototypeBean;
@@ -61,6 +62,12 @@ public class DependencyInjectionApplication {
         System.out.println(omarConfiguration.getUsername());
         System.out.println(omarConfiguration.getPassword());
         System.out.println(omarConfiguration.getJdbcurl());
+
+        System.out.println("------------- Constructor Binding");
+        OmarConstructorConfig omarConstructorConfig = ctx.getBean(OmarConstructorConfig.class);
+        System.out.println(omarConstructorConfig.getUsername());
+        System.out.println(omarConstructorConfig.getPassword());
+        System.out.println(omarConstructorConfig.getJdbcurl());
     }
 
 }

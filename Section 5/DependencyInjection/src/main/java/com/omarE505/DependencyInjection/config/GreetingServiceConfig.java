@@ -7,18 +7,19 @@ import com.omarE505.DependencyInjection.services.*;
 import com.springframework.pets.PetService;
 import com.springframework.pets.PetServiceFactory;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.*;
-
+@EnableConfigurationProperties(OmarConstructorConfig.class)
 @ImportResource("classpath:omar-config.xml")
 @Configuration
 public class GreetingServiceConfig {
 
     @Bean
-    FakeDataSource fakeDataSource(OmarConfiguration omarConfiguration) {
+    FakeDataSource fakeDataSource(OmarConstructorConfig omarConstructorConfig) {
         FakeDataSource fakeDataSource = new FakeDataSource();
-        fakeDataSource.setJdbcurl(omarConfiguration.getJdbcurl());
-        fakeDataSource.setUsername(omarConfiguration.getUsername());
-        fakeDataSource.setPassword(omarConfiguration.getPassword());
+        fakeDataSource.setJdbcurl(omarConstructorConfig.getJdbcurl());
+        fakeDataSource.setUsername(omarConstructorConfig.getUsername());
+        fakeDataSource.setPassword(omarConstructorConfig.getPassword());
         return fakeDataSource;
     }
 
