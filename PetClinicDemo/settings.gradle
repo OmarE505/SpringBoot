@@ -1,4 +1,3 @@
 rootProject.name = 'PetClinicDemo'
 include 'pet-clinic-data'
 include 'pet-clinic-web'
-
