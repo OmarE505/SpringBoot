@@ -4,6 +4,7 @@ import com.omarE505.RecipeProject.models.*;
 import com.omarE505.RecipeProject.repositories.CategoryRepository;
 import com.omarE505.RecipeProject.repositories.RecipeRepository;
 import com.omarE505.RecipeProject.repositories.UnitOfMeasureRepository;
+import jakarta.transaction.Transactional;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
@@ -28,6 +29,7 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
     }
 
     @Override
+    @Transactional
     public void onApplicationEvent(ContextRefreshedEvent event) {
         log.debug("I'm in the bootstrap");
         recipeRepository.saveAll(getRecipes());
