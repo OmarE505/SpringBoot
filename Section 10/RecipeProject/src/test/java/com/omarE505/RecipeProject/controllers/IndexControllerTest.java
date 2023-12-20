@@ -2,7 +2,6 @@ package com.omarE505.RecipeProject.controllers;
 
 import com.omarE505.RecipeProject.models.Recipe;
 import com.omarE505.RecipeProject.services.RecipeService;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
@@ -15,6 +14,7 @@ import org.springframework.ui.Model;
 import java.util.HashSet;
 import java.util.Set;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -68,10 +68,10 @@ class IndexControllerTest {
 
 
         //then
-        Assertions.assertEquals("index", viewName);
+        assertEquals("index", viewName);
         verify(recipeService, times(1)).getRecipes();
         verify(model, times(1)).addAttribute(eq("recipes"), argumentCaptor.capture());
         Set<Recipe> setInController = argumentCaptor.getValue();
-        Assertions.assertEquals(2, setInController.size());
+        assertEquals(2, setInController.size());
     }
 }
