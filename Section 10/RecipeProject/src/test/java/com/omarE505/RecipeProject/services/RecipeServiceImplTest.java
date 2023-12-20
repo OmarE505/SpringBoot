@@ -20,19 +20,22 @@ class RecipeServiceImplTest {
     @Mock
     RecipeRepository recipeRepository;
 
+
     @BeforeEach
-    void setUp() {
-        MockitoAnnotations.openMocks(this);
+    public void setUp() throws Exception {
+        MockitoAnnotations.initMocks(this);
+
         recipeService = new RecipeServiceImpl(recipeRepository);
     }
 
     @Test
-    void getRecipes() {
-        Recipe recipe = new Recipe();
-        HashSet recipeData = new HashSet();
-        recipeData.add(recipe);
+    public void getRecipes() throws Exception {
 
-        when(recipeRepository.findAll()).thenReturn(recipeData);
+        Recipe recipe = new Recipe();
+        HashSet receipesData = new HashSet();
+        receipesData.add(recipe);
+
+        when(recipeService.getRecipes()).thenReturn(receipesData);
 
         Set<Recipe> recipes = recipeService.getRecipes();
 
