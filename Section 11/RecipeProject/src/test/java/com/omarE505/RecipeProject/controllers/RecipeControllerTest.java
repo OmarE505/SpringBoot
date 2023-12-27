@@ -2,7 +2,7 @@ package com.omarE505.RecipeProject.controllers;
 
 import com.omarE505.RecipeProject.models.Recipe;
 import com.omarE505.RecipeProject.services.RecipeService;
-import org.aspectj.lang.annotation.Before;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
@@ -23,7 +23,7 @@ public class RecipeControllerTest {
 
     RecipeController controller;
 
-    @Before
+    @BeforeEach
     public void setUp() throws Exception {
         MockitoAnnotations.initMocks(this);
 
