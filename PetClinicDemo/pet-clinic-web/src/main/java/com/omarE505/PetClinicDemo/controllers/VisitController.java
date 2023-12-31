@@ -4,6 +4,7 @@ import com.omarE505.PetClinicDemo.models.Pet;
 import com.omarE505.PetClinicDemo.models.Visit;
 import com.omarE505.PetClinicDemo.services.PetService;
 import com.omarE505.PetClinicDemo.services.VisitService;
+import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
@@ -64,7 +65,7 @@ public class VisitController {
 
     // Spring MVC calls method loadPetWithVisit(...) before processNewVisitForm is called
     @PostMapping("/owners/{ownerId}/pets/{petId}/visits/new")
-    public String processNewVisitForm(Visit visit, BindingResult result) {
+    public String processNewVisitForm(@Valid Visit visit, BindingResult result) {
         if (result.hasErrors()) {
             return "pets/createOrUpdateVisitForm";
         } else {
