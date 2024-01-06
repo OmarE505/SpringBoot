@@ -18,6 +18,17 @@ apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 apply plugin: 'jacoco'
 
+configurations {
+	[apiElements, runtimeElements].each {
+		it.outgoing.artifacts.removeIf { it.buildDependencies.getDependencies(null).contains(jar) }
+		it.outgoing.artifact(bootJar)
+	}
+}
+
+jar {
+	enabled = false
+}
+
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 
