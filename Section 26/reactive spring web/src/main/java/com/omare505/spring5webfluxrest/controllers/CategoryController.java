@@ -28,12 +28,12 @@ public class CategoryController {
 
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping("/api/v1/categories")
-    Mono<Void> create(@RequestBody Publisher<Category> categoryStream){
+    public Mono<Void> create(@RequestBody Publisher<Category> categoryStream){
         return categoryRepository.saveAll(categoryStream).then();
     }
 
     @PutMapping("/api/v1/categories/{id}")
-    Mono<Category> update(@PathVariable String id, @RequestBody Category category) {
+    public Mono<Category> update(@PathVariable String id, @RequestBody Category category) {
         category.setId(id);
         return categoryRepository.save(category);
     }
