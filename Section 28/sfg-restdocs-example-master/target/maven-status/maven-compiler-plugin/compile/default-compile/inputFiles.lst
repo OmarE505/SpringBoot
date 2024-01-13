@@ -1,0 +1,11 @@
+/Users/omar.emad/Desktop/SpringBoot/SpringBoot/Section 28/sfg-restdocs-example-master/src/main/java/guru/springframework/sfgrestdocsexample/web/mappers/BeerMapper.java
+/Users/omar.emad/Desktop/SpringBoot/SpringBoot/Section 28/sfg-restdocs-example-master/src/main/java/guru/springframework/sfgrestdocsexample/web/controller/MvcExceptionHandler.java
+/Users/omar.emad/Desktop/SpringBoot/SpringBoot/Section 28/sfg-restdocs-example-master/src/main/java/guru/springframework/sfgrestdocsexample/domain/Beer.java
+/Users/omar.emad/Desktop/SpringBoot/SpringBoot/Section 28/sfg-restdocs-example-master/src/main/java/guru/springframework/sfgrestdocsexample/web/model/BeerDto.java
+/Users/omar.emad/Desktop/SpringBoot/SpringBoot/Section 28/sfg-restdocs-example-master/src/main/java/guru/springframework/sfgrestdocsexample/SfgRestdocsExampleApplication.java
+/Users/omar.emad/Desktop/SpringBoot/SpringBoot/Section 28/sfg-restdocs-example-master/src/main/java/guru/springframework/sfgrestdocsexample/web/model/BeerStyleEnum.java
+/Users/omar.emad/Desktop/SpringBoot/SpringBoot/Section 28/sfg-restdocs-example-master/src/main/java/guru/springframework/sfgrestdocsexample/web/mappers/DateMapper.java
+/Users/omar.emad/Desktop/SpringBoot/SpringBoot/Section 28/sfg-restdocs-example-master/src/main/java/guru/springframework/sfgrestdocsexample/repositories/BeerRepository.java
+/Users/omar.emad/Desktop/SpringBoot/SpringBoot/Section 28/sfg-restdocs-example-master/src/main/java/guru/springframework/sfgrestdocsexample/web/controller/BeerController.java
+/Users/omar.emad/Desktop/SpringBoot/SpringBoot/Section 28/sfg-restdocs-example-master/src/main/java/guru/springframework/sfgrestdocsexample/web/model/BeerPagedList.java
+/Users/omar.emad/Desktop/SpringBoot/SpringBoot/Section 28/sfg-restdocs-example-master/src/main/java/guru/springframework/sfgrestdocsexample/bootstrap/BeerLoader.java
